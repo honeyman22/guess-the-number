@@ -35,7 +35,23 @@ Welcome to the "Guess the Number" game! This is a simple number guessing game wh
 
 ## Customization
 
-Feel free to explore and customize the game. You can modify the code, add new features, or enhance the user interface to make the game even more enjoyable.
+Feel free to explore and customize the game. Here are some ideas for improvement:
+
+- **High Scores:**
+  - Implement a high-score system that keeps track of the best attempts for each difficulty level. Save high scores to a file for persistence.
+
+- **GUI Enhancement:**
+  - Improve the graphical user interface (GUI) using a library like Tkinter or Pygame for a more interactive and visually appealing experience.
+
+- **Sound Effects:**
+  - Add sound effects or background music to enhance the gaming atmosphere.
+
+- **Difficulty Levels:**
+  - Expand on the difficulty levels by introducing more challenging levels or allowing users to customize the range of numbers.
+
+- **Multiplayer Mode:**
+  - Implement a multiplayer mode where players can take turns guessing the number.
+
 
 ## Dependencies
 
