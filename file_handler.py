@@ -1,21 +1,9 @@
 import json
-class Player:
-
-    def __init__(self,name):
-        self.name=name
-        self.high_score = 0
-
-    def update_high_score(self,attempts):
-        if attempts < 11 :
-            self.high_score += 10/attempts
-        else:
-            self.high_score -= 5
-
 
 def save_high_scores(player):
     data_to_save ={
-    "name":player.name,
-    "high_score":player.high_score
+        "name":player.name,
+        "high_score":player.high_score
     }
 
     with open('score_card.json',"w")as file:
