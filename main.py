@@ -1,12 +1,11 @@
 from game import GuessNumberGame
-from player import Player, save_high_scores , load_high_score
-
+from player import Player, save_high_scores , load_high_scores
 
 
 def play_game():
     player_name = input("Enter your name : ")
     player = Player(player_name)
-    # load_high_score(player)
+    load_high_scores(player)
     lower_limit = 1
     upper_limit = 100
     difficulty_levels={"easy":(1,50),"medium":(1,100),"hard":(1,150)}
@@ -20,6 +19,7 @@ def play_game():
             print("Invalid difficulty. Please choose again")
 
     game= GuessNumberGame(lower_limit,upper_limit)
+    game.player = player
     game.generate_secret_number()
 
     while True:
@@ -30,7 +30,7 @@ def play_game():
             continue
 
         if game.play_round(user_guess):
-            player.update_high_score(game.attempts)
+            player.update_high_scores(difficulty, game.attempts)
             save_high_scores(player)
             play_again = input("Do you want to play again? (yes/no) : ")
 

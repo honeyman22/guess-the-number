@@ -22,6 +22,8 @@ class GuessNumberGame:
         else:
             print("Too High! Try Again")
         return False
-
+    
+    def get_high_score(self, difficulty):
+        return self.player.high_scores.get(difficulty, None)
       
 
